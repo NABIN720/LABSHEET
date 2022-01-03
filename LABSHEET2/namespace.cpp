@@ -6,6 +6,7 @@
   of the "Cube" namespaceand the square of the integer variable "num" of the "Cube" namespace using the "fun" function 
 of the "Square" namespace.*/
 #include<iostream>
+using namespace std;
 namespace square
 {
     int num;
@@ -24,5 +25,9 @@ namespace cube
 }
 int main()
 {
-    
+   square::num=3;
+   cube::num=4;
+   cout<<"The cube of square num is"<<cube::fun(square::num);
+   cout<<"The square of cube num is"<<square::fun(cube::num);
+   return 0;
 }
